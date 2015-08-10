@@ -1,0 +1,18 @@
+body { 
+	background-color: #7CBBFF;
+}
+
+
+h1 {
+	font-size: 50px;
+	color: #fff;
+	font-family: 'Gochi Hand', cursive;
+	text-align: center;
+}
+
+.btn-digi1 {
+	color: #fff;
+	font-family: 'Gochi Hand', cursive;
+  background-color: #FF3DB0;
+  border-color: #FF49A3;
+}
