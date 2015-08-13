@@ -1,13 +1,10 @@
 console.log('hello from app.js');
 
-//get the google map API
-
-
-
 angular.module('myApp',['ngRoute', 'ngResource']);
 
 angular.module('myApp').config(['$routeProvider', function($routeProvider){
 
+	console.log('route');
 	$routeProvider.
 		when('/', {
 			templateUrl: 'views/address.html',
@@ -16,8 +13,13 @@ angular.module('myApp').config(['$routeProvider', function($routeProvider){
 
 }]);
 
+console.log('hello 2 from app.js');
+
+
 angular.module('myApp').config(['$httpProvider', function($httpProvider) {
   
+  		console.log('http');
+
         $httpProvider.defaults.useXDomain = true;
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
@@ -25,6 +27,8 @@ angular.module('myApp').config(['$httpProvider', function($httpProvider) {
 
 
 angular.module('myApp').controller('DistanceController', ['$scope', function($scope){
+
+	console.log('hi from DC');
 
 	//setup used so we use google maps API
 	var service = new google.maps.DistanceMatrixService();
@@ -40,7 +44,7 @@ angular.module('myApp').controller('DistanceController', ['$scope', function($sc
 
 
 	//method which calulates the distance between origin and distance
-	$scope.calculateDistance = function(dest){
+	$scope.calculateDistance = function(){
 
 		service.getDistanceMatrix(
 		{
