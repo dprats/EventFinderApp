@@ -1,0 +1,13 @@
+<div ng-controller="DistanceController">
+
+	<form ng-submit="calculateDistance(destination)">
+		<div><input type="text" ng-model="origin" placeholder="Official Puppy HQ" size ="35"/></div>
+		<div><input type="text" ng-model="destination" placeholder="address" size ="35"/></div>
+		<input type="submit" />
+	</form>
+
+	<p><strong>Origin:</strong> {{ origin }}</p>
+	<p><strong>Destination:</strong> {{ destination }}</p>
+	<p><strong>Distance from the puppy HQ:</strong> {{ distanceToDestination }}</p>
+	<p><strong>Driving time from the puppy HQ:</strong> {{ durationToDestination }}</p>
+</div>
