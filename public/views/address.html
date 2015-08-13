@@ -1,13 +1,31 @@
-<div ng-controller="DistanceController">
+<div class="row">  
+			<div class="col-md-4">
+			</div>
+			<div class="col-md-4">
+				<h1>Digi Near Me!</h1>
+				  <div class="input-group">
+      			<input type="text" class="form-control" placeholder="Zip Code">
+      			<span class="input-group-btn">
+        			<button class="btn btn-digi1" type="button">Find My Baes</button>
+     				 </span>
+    			</div>
+    		</div>
 
-	<form ng-submit="calculateDistance(destination)">
-		<div><input type="text" ng-model="origin" placeholder="Official Puppy HQ" size ="35"/></div>
-		<div><input type="text" ng-model="destination" placeholder="address" size ="35"/></div>
-		<input type="submit" />
-	</form>
-
-	<p><strong>Origin:</strong> {{ origin }}</p>
-	<p><strong>Destination:</strong> {{ destination }}</p>
-	<p><strong>Distance from the puppy HQ:</strong> {{ distanceToDestination }}</p>
-	<p><strong>Driving time from the puppy HQ:</strong> {{ durationToDestination }}</p>
+    		
 </div>
+
+
+			<!-- test form for calculating distances -->
+    		<div  ng-controller="DistanceController">
+
+				<form ng-submit="calculateDistance(destination)">
+					<div><input type="text" ng-model="origin" placeholder="Official Puppy HQ" size ="35"/></div>
+					<div><input type="text"  ng-model="destination" placeholder="destination" size ="35"/></div>
+					<input type="submit" class="btn btn-digi1" />
+				</form>
+
+				<p><strong>Origin:</strong> {{ origin }}</p>
+				<p><strong>Destination:</strong> {{ destination }}</p>
+				<p><strong>Distance from the puppy HQ:</strong> {{ distanceToDestination }}</p>
+				<p><strong>Driving time from the puppy HQ:</strong> {{ durationToDestination }}</p>
+		</div>

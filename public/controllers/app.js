@@ -1,5 +1,3 @@
-console.log('hello from app.js');
-
 angular.module('myApp',['ngRoute', 'ngResource']);
 
 angular.module('myApp').config(['$routeProvider', function($routeProvider){
@@ -13,9 +11,6 @@ angular.module('myApp').config(['$routeProvider', function($routeProvider){
 
 }]);
 
-console.log('hello 2 from app.js');
-
-
 angular.module('myApp').config(['$httpProvider', function($httpProvider) {
   
   		console.log('http');
@@ -24,11 +19,7 @@ angular.module('myApp').config(['$httpProvider', function($httpProvider) {
         delete $httpProvider.defaults.headers.common['X-Requested-With'];
 }]);
 
-
-
 angular.module('myApp').controller('DistanceController', ['$scope', function($scope){
-
-	console.log('hi from DC');
 
 	//setup used so we use google maps API
 	var service = new google.maps.DistanceMatrixService();
@@ -50,7 +41,8 @@ angular.module('myApp').controller('DistanceController', ['$scope', function($sc
 		{
 			origins: [$scope.origin],
 			destinations: [$scope.destination],
-			travelMode: google.maps.TravelMode.DRIVING
+			travelMode: google.maps.TravelMode.DRIVING,
+			unitSystem: google.maps.UnitSystem.IMPERIAL
 		}, function(res, status){
 			var status = res.rows[0].elements[0].status;
 			console.log("status: " + status);
@@ -66,7 +58,6 @@ angular.module('myApp').controller('DistanceController', ['$scope', function($sc
 		});
 
 	}
-
 
 }]);
 
