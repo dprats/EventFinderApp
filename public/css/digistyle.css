@@ -1,13 +1,31 @@
-body { 
-	background-color: #7CBBFF;
+
+.navbar-wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100% !important;
+    left: 0;
+    z-index: 5000;
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+/*why does this create issues for the navbar when small?*/
+.digistars {
+	margin-top: 60px;
+	min-height: 200px;
 }
 
 
 h1 {
-	font-size: 50px;
+	font-size: 20px;
 	color: #fff;
 	font-family: 'Gochi Hand', cursive;
 	text-align: center;
+}
+
+.baes {
+	max-width: 25em;
 }
 
 .btn-digi1 {
@@ -15,4 +33,14 @@ h1 {
 	font-family: 'Gochi Hand', cursive;
   background-color: #FF3DB0;
   border-color: #FF49A3;
+}
+
+.offerings ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.offerings li {
+	display: inline;
 }

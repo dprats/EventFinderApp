@@ -1,31 +1,104 @@
-<div class="row">  
-			<div class="col-md-4">
-			</div>
-			<div class="col-md-4">
-				<h1>Digi Near Me!</h1>
-				  <div class="input-group">
-      			<input type="text" class="form-control" placeholder="Zip Code">
-      			<span class="input-group-btn">
-        			<button class="btn btn-digi1" type="button">Find My Baes</button>
-     				 </span>
-    			</div>
-    		</div>
+<!-- nav	 -->
+<nav class="navbar navbar-default navbar-static-top navbar-wrapper">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Digitour</a>
+    </div>
 
-    		
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class=" active dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Buy Tickets <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">DigiFest</a></li>
+            <li><a href="#">Creative Collab</a></li>
+            <li><a href="#">Slaybells</a></li>
+          </ul>
+        </li>
+        <li class=""><a href="#">Pics &amp; Vids <span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Store</a></li>
+      </ul>
+      <!-- find my baes -->
+  
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+	        <div class="baes input-group">
+					<input type="text" class="form-control" placeholder="Zip Code">
+					<span class="input-group-btn">
+		  			<button class="btn btn-digi1" type="button">Find My Baes</button>
+				 </span> <!-- input-group-btn -->
+				</div> <!-- input-group -->
+		</li>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<!-- new section -->
+
+<div class="jumbotron digistars">
+  <div class="container">
+    <h1> Jumbotron </h1>
+  </div>
 </div>
 
+<!-- new section -->
+<div class="container">
+  <ul class="offerings">
+  	<li>
+  		<h3> Find nearby tickets </h3>
+  		<p> Williamsburg meh Austin, kogi asymmetrical put a bird on it freegan. Marfa sustainable High Life Godard meggings, chillwave brunch.</p>
+  	</li>
+  	<li>
+  		<h3> See who's going where </h3>
+  		<p>Williamsburg meh Austin, kogi asymmetrical put a bird on it freegan. Marfa sustainable High Life Godard meggings, chillwave brunch.</p>
+		</li>
+		<li> 
+			<h3> Buy DigiSwag </h3> 
+			<p> Williamsburg meh Austin, kogi asymmetrical put a bird on it freegan. Marfa sustainable High Life Godard meggings, chillwave brunch.</p>
+		</li>
+  </ul>
+</div>
 
-			<!-- test form for calculating distances -->
-    		<div  ng-controller="DistanceController">
+<!-- other section -->
 
+<section class="container-fluid">
+	<div class="row"> 
+		<div class="col-md-4 col-md-offset-4"> 
+			<h1>Digi Near Me!</h1>
+		  <div class="input-group">
+				<input type="text" class="form-control" placeholder="Zip Code">
+				<span class="input-group-btn">
+	  			<button class="btn btn-digi1" type="button">Find My Baes</button>
+			 </span> <!-- input-group-btn -->
+			</div> <!-- input-group -->
+		</div> <!-- col -->
+	</div> <!-- row -->
+	<div class="row">
+		<div class="col-md-4 col-md-offset-4">
+		<!-- test form for calculating distances -->
+			<div ng-controller="DistanceController">
 				<form ng-submit="calculateDistance(destination)">
 					<div><input type="text" ng-model="origin" placeholder="Official Puppy HQ" size ="35"/></div>
 					<div><input type="text"  ng-model="destination" placeholder="destination" size ="35"/></div>
 					<input type="submit" class="btn btn-digi1" />
 				</form>
-
-				<p><strong>Origin:</strong> {{ origin }}</p>
-				<p><strong>Destination:</strong> {{ destination }}</p>
-				<p><strong>Distance from the puppy HQ:</strong> {{ distanceToDestination }}</p>
-				<p><strong>Driving time from the puppy HQ:</strong> {{ durationToDestination }}</p>
+			<p><strong>Origin:</strong> {{ origin }}</p>
+			<p><strong>Destination:</strong> {{ destination }}</p>
+			<p><strong>Distance from the puppy HQ:</strong> {{ distanceToDestination }}</p>
+			<p><strong>Driving time from the puppy HQ:</strong> {{ durationToDestination }}</p>
+			</div>
 		</div>
+	</div>    		
+</section>
+
+
+
+			
